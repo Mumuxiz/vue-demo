@@ -1,0 +1,92 @@
+/**
+ * Created by zmm.
+ * Date: 2019/08/21 11:24
+ * Describe: 基础配置
+ */
+
+/*
+ ***********************
+ * 基础色调
+ ***********************
+ */
+// 主色调
+$color-primary: #1989FA;
+$color-primary-dark: #1574D4;
+$color-primary-light: #52A6FB;
+
+$color-success: #67C23A;
+$color-success-dark: #5cae34;
+$color-success-light: #85ce61;
+
+$color-warning: #E6A23C;
+$color-warning-dark: #cf9136;
+$color-warning-light: #ebb563;
+
+$color-danger: #FA5555;
+$color-danger-dark: #D34848;
+$color-danger-light: #FB7777;
+
+$color-info: #909399;
+$color-info-dark: #818489;
+$color-info-light: #a6a9ad;
+
+// 浅色背景色
+$bgColor: #F4F6F9;
+// 边框
+$borderColor: rgb(228, 228, 228);
+// 输入框边框颜色
+$inputBorderColor: #D8DCE6;
+// 黑色，主要文字颜色
+$black: #333;
+// 深蓝色，主要色调
+$mainColor: #323649;
+// 灰色，主要线性图颜色
+$gray: #555;
+// 中灰，次要文字颜色
+$neutralGrey: #999;
+// 浅灰，线条颜色
+$lightGray: #ccc;
+
+
+
+/*
+ ***************************
+ * 间距
+ ***************************
+ */
+$spacingMax: 20px;
+$spacingMid: 10px;
+$spacingSmall: 4px;
+$spacingMin: 2px;
+
+
+
+/**
+ * *******************************************
+ * mixin 根据设置像素比，显示不同的背景图
+ * *******************************************
+ */
+@mixin bgImage ($url) {
+  background-image: url('#{$url}@1x.png');
+  @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+    background-image: url('#{$url}@2x.png');
+  }
+  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+    background-image: url('#{$url}@3x.png');
+  }
+}
+
+
+/**
+ * **********************************
+ * 多行文本超出省略
+ * **********************************
+ */
+// webpack编译后，-webkit-box-orient: vertical;被忽略了
+@mixin clampFn ($line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  overflow: hidden;
+  -webkit-line-clamp: #{$line};
+}
