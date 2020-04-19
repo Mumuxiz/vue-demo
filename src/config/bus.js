@@ -1,5 +1,5 @@
 /**
- * Created by Mireia.
+ * Created by Mumuxiz.
  * Date: 2019/09/11 13:25
  * Describe: bus用于全局通信
  */

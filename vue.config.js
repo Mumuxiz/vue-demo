@@ -1,5 +1,5 @@
 /**
- * Created by zmm.
+ * Created by Mumuxiz.
  * Date: 2019/08/21 15:47
  * Describe: vue.config.js配置
  */

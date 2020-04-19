@@ -2,7 +2,7 @@
   <div class="home">
     <!-- 面包屑导航 -->
     <breadcrumbUi></breadcrumbUi>
-    <div class="main-box" :style="style">
+    <div class="main-box">
       <el-row :gutter="10" class="box">
         <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
           <div class="box-item">
@@ -49,28 +49,12 @@ export default {
   components: {
     breadcrumbUi
   },
-  computed: {
-    style () {
-      return `height:${this.height}px`
-    }
-  },
   data () {
     return {
-      height: 0
     }
   },
   mounted () {
-    this.$nextTick(() => {
-      this.height = window.innerHeight - 130
-    })
-    this.wr = new this.$WatchWinResize(() => {
-      this.height = window.innerHeight - 130
-    })
-
     this.$router.push('/login')
-  },
-  beforeDestroy () {
-    this.wr.destroy()
   }
 }
 </script>

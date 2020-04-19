@@ -1,5 +1,5 @@
 /**
- * Created by Mireia.
+ * Created by Mumuxiz.
  * Date: 2019/09/19 15:36
  * Describe: 全局注册组件
  */

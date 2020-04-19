@@ -1,5 +1,5 @@
 /**
- * Created by Mireia.
+ * Created by Mumuxiz.
  * Date: 2019/11/26 11:43
  * Describe: 阿里云OSS上传
  */
@@ -95,7 +95,6 @@ function handleGetSign (resolve, reject) {
   // 后台返回上传凭证
   axios.post('/fileSign', { id: 123 }).then(sign => {
     console.log(sign)
-    debugger
     // 处理特殊情况
     // {"code":0,"message":"Speicified endpoint or uri is not valid."}
     if (sign.access_key_id) {

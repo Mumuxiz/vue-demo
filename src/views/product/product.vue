@@ -3,7 +3,7 @@
     <!-- 面包屑导航 -->
     <m-breadcrumb></m-breadcrumb>
 
-    <div class="main-box" :style="style">
+    <div class="main-box">
     </div>
   </div>
 </template>
@@ -14,24 +14,9 @@ export default {
   name: 'product',
   data () {
     return {
-      height: 0
-    }
-  },
-  computed: {
-    style () {
-      return `height:${this.height}px`
     }
   },
   mounted () {
-    this.$nextTick(() => {
-      this.height = window.innerHeight - 130
-    });
-    this.wr = new this.$WatchWinResize(() => {
-      this.height = window.innerHeight - 130
-    })
-  },
-  beforeDestroy () {
-    this.wr.destroy()
   }
 }
 </script>

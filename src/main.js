@@ -8,8 +8,6 @@ import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 // 引入自定义样式
 import './assets/css/index.scss'
-// 引入全局自定义方法
-import WatchWinResize from './utils/dom'
 // 注册全局组件
 import './config/vue-component'
 import Router from 'vue-router'
@@ -19,9 +17,8 @@ import './config/mock'
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios
-Vue.prototype.$WatchWinResize = WatchWinResize
 // 项目中所有拥有 size 属性的组件的默认尺寸均为 'small'
-Vue.use(Element, { size: 'small' })
+// Vue.use(Element, { size: 'small' })
 
 Vue.use(Element)
 
